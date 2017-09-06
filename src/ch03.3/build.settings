@@ -1,0 +1,73 @@
+settings = {
+  build = {
+    neverStripDebugInfo = false
+  },
+
+  orientation = {
+    default = "portrait",
+    supported = { "portrait", "landscapeLeft", "landscapeRight", "portraitUpsideDown" }
+  },
+
+  iphone = {
+    plist =
+    {
+      CFBundleIdentifier = "com.girls.the", -- 수정하세요
+      CFBundleDisplayName = "TheGirls", -- 수정하세요
+      -- MinimumOSVersion="6.0",
+      UIApplicationExitsOnSuspend = false,
+      UIStatusBarHidden = false,
+      UIPrerenderedIcon = true,
+      -- UIAppFonts = {
+      --   "폰트명.ttf"
+      -- },
+      CFBundleIconFile = "Icon.png",
+      CFBundleIconFiles = {
+        "Icon.png",
+        "Icon@2x.png",
+        "Icon-60.png",
+        "Icon-60@2x.png",
+        "Icon-60@3x.png",
+        "Icon-72.png",
+        "Icon-72@2x.png",
+        "Icon-76.png",
+        "Icon-76@2x.png",
+        "Icon-167.png",
+        "Icon-Small-40.png",
+        "Icon-Small-40@2x.png",
+        "Icon-Small-40@3x.png",
+        "Icon-Small-50.png",
+        "Icon-Small-50@2x.png",
+        "Icon-Small.png",
+        "Icon-Small@2x.png",
+        "Icon-Small@3x.png"
+      },
+
+      --[[
+      -- iOS app URL schemes:
+      CFBundleURLTypes =
+      {
+        {
+          CFBundleURLSchemes =
+          {
+            "fbXXXXXXXXXXXXXX", -- example scheme for facebook
+            "coronasdkapp", -- example second scheme
+          }
+        }
+      },
+      --]]
+    },
+  },
+
+  android = {
+    "android.permission.INTERNET"
+  },
+
+  -- 각 플랫폼마다 특정 파일들을 빼고 싶다면 수정하세요.
+  -- ex) "Icon.png", *@2x.png"
+  excludeFiles = 
+  {
+    all = {},
+    iphone = {}, -- "Icon-*dpi.png"
+    android = {} -- "Icon.png", "*@2x.png"
+  },
+}

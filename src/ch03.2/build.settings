@@ -1,0 +1,51 @@
+settings = {
+  build = {
+    neverStripDebugInfo = false
+  },
+  orientation = {
+    default = "portrait",
+    supported = {"portrait","portraitUpsideDown",
+        "landscapeLeft","landscapeRight"}
+  },
+  iphone = {
+    plist = {
+      CFBundleIdentifier = "com.girls.the",
+      CFBundleDisplayName = "TheGirls",
+      CoronaWindowMovesWhenKeyboardAppears = true,
+      MinimumOSVersion = "6.0",
+      UIApplicationExitsOnSuspend = false,
+      UIStatusBarHidden = false,
+      UIPrerendereIcon = true,
+      --[[
+      UIAppFonts = {
+        "MyFont.ttf"
+      },
+      ]]
+      CFBundleIconFile = "Icon.png",
+      CFBundleIconFiles = {
+        "Icon.png",
+        --"Icon@2x.png"
+      }
+    }
+  },
+  android = {
+    coronaWindowMovesWhenKeyboardAppears = true,
+    permissions = {
+      { name = ".permission.C2D_MESSAGE",protectionLevel="signature" }
+    },
+    usesPermissions = {
+      "android.permission.INTERNET",
+      "android.permission.GET_ACCOUNTS" 
+    }
+  },
+  plugins = {
+    ["plugin.notifications"] = {
+      publisherId = "com.coronalabs",
+    }
+  },
+  excludeFiles = {
+    all = { "*_private.txt" },
+    iphone = { "Icon-*dpi.png" },
+    android = { "Icon.png", "*@2x.png" }
+  }
+}
