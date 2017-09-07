@@ -1,0 +1,18 @@
+-- local star = display.newLine(200,200, 230,250)
+-- star:append(300,250)
+-- star:append(240,295)
+-- star:append(280,370)
+-- star:append(200,330)
+-- star:append(120,370)
+-- star:append(160,295)
+-- star:append(100,250)
+-- star:append(170,250)
+-- star:setStrokeColor(1,0,0,1)
+
+local star = display.newLine(200,200, 280,370)
+star:append(100,250)
+star:append(300,250)
+star:append(120,370)
+star:append(200,200)
+star:setStrokeColor(1,0,0,1)
+star.strokeWidth = 3
